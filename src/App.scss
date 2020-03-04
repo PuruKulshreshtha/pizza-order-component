@@ -1,0 +1,88 @@
+$theme: #3e008d;
+$themeBg: #f7f7f7;
+
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.App {
+  width: 80%;
+  text-align: center;
+  &_title {
+    font-size: 22px;
+    text-align: start;
+    color: $theme;
+    padding: 10px;
+  }
+  &_body {
+    user-select: none;
+    border: 1px solid black;
+    padding: 10px;
+    .pizza_type {
+      justify-content: flex-end;
+      padding: 2px 0;
+      .p_name {
+        margin: 0 10px 0 25px;
+        width: 70px;
+        text-align: left;
+      }
+    }
+    .user_type {
+      justify-content: flex-start;
+      padding: 2px 0;
+      .p_name {
+        flex: 1;
+        text-align: left;
+      }
+    }
+    .user_logo {
+      min-width: 40px;
+    }
+    .plus_minus_wrapper {
+      min-width: 34px;
+      min-height: 42px;
+    }
+  }
+  &_total {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+  &_count {
+    user-select: none;
+    min-width: 35px;
+    font-size: 18px;
+  }
+  .bold-text {
+    font-weight: bold;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
