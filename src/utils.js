@@ -81,5 +81,5 @@ export const onPizzaCountChange = data => {
   }
   // console.log(" small=", small, "large=", large, "medium=", medium);
   // console.log("adults", adults, "child", child);
-  return { adults, child };
+  return { adults, child, ...onUserCountChange({ adults, child }) };
 };

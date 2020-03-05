@@ -18,19 +18,12 @@ export default class App extends Component {
   state = { small: 0, medium: 1, large: 0, adults: 1, child: 0 };
 
   handlePizzaCount = (type, operation) => {
-    let newCount = this.state[type];
-    if (operation === "inc") {
-      newCount++;
-    } else {
-      newCount--;
-    }
     const newState = onPizzaCountChange({
       ...this.state,
-      [type]: newCount,
       type,
       operation
     });
-    this.setState({ ...newState, [type]: newCount });
+    this.setState({ ...newState });
   };
   handleAdultCount = operation => {
     let adults = this.state.adults;
