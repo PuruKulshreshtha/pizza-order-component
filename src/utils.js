@@ -50,7 +50,7 @@ export const onUserCountChange = data => {
 };
 
 export const onPizzaCountChange = data => {
-  let { small, medium, large, child, adults, type, operation } = data;
+  let { child, adults, type, operation } = data;
   if (operation === "inc") {
     if (type === "large") {
       adults += 2;
@@ -61,16 +61,16 @@ export const onPizzaCountChange = data => {
     }
   } else {
     if (type === "large") {
-      if (adults <= 0) {
+      if (adults <= 1 && child >= 4) {
         child -= 4;
-      } else if (adults <= 1) {
+      } else if (adults <= 2 && child >= 2) {
         adults--;
         child -= 2;
       } else {
-        adults -= 4;
+        adults -= 2;
       }
     } else if (type === "medium") {
-      if (adults <= 1) {
+      if (adults <= 1 && child >= 2) {
         child -= 2;
       } else {
         adults--;
@@ -79,20 +79,7 @@ export const onPizzaCountChange = data => {
       child--;
     }
   }
-  // // calulate large pizza
-  // if (large) {
-  //   newAdults += 2 * large;
-  //   large = 0;
-  // }
-  // if (medium) {
-  //   newAdults += medium;
-  //   medium = 0;
-  // }
-  // if (small) {
-  //   newChild += small;
-  //   small = 0;
-  // }
-  console.log(" small=", small, "large=", large, "medium=", medium);
-  console.log("adults", adults, "child", child);
+  // console.log(" small=", small, "large=", large, "medium=", medium);
+  // console.log("adults", adults, "child", child);
   return { adults, child };
 };

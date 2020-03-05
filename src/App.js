@@ -43,7 +43,6 @@ export default class App extends Component {
       adults: adults,
       child: this.state.child
     });
-    console.log("adults", adults);
     this.setState({ ...newState, adults: adults });
   };
   handleChildCount = operation => {
@@ -62,15 +61,22 @@ export default class App extends Component {
 
   render() {
     const { small, medium, large, adults, child } = this.state;
+    const totalAmount = 150 * small + 200 * medium + 300 * large;
     const handleDecPizzaDisable = type => {
-      // console.log(">>>>>>>>> ", adults, child, large, type);
-      if (adults === 2 && child < 2 && large !== 0 && type === "large") {
-        return true;
+      if (type === "large") {
+        return totalAmount < 500;
+      } else if (type === "medium") {
+        return totalAmount < 400;
       }
-      return this.state[type] <= 0;
+      return totalAmount <= 350;
     };
     const handleIncPizzaDisable = type => {
-      return 150 * small + 200 * medium + 300 * large > 700;
+      if (type === "large") {
+        return totalAmount > 700;
+      } else if (type === "medium" || type === "adult") {
+        return totalAmount > 800;
+      }
+      return totalAmount > 850;
     };
     return (
       <div className="App">
@@ -87,7 +93,9 @@ export default class App extends Component {
                 <div className="plus_minus_wrapper center">
                   <Minus
                     onClick={this.handlePizzaCount.bind(this, type, "dec")}
-                    disabled={handleDecPizzaDisable(type)}
+                    disabled={
+                      handleDecPizzaDisable(type) || this.state[type] <= 0
+                    }
                   />
                 </div>
                 <div className="App_count">{this.state[type]}</div>
@@ -116,7 +124,7 @@ export default class App extends Component {
             <div className="plus_minus_wrapper center">
               <Plus
                 onClick={this.handleAdultCount.bind(this, "inc")}
-                disabled={handleIncPizzaDisable()}
+                disabled={handleIncPizzaDisable("adult")}
               />
             </div>
           </div>
@@ -136,7 +144,7 @@ export default class App extends Component {
             <div className="plus_minus_wrapper center">
               <Plus
                 onClick={this.handleChildCount.bind(this, "inc")}
-                disabled={handleIncPizzaDisable()}
+                disabled={handleIncPizzaDisable("child")}
               />
             </div>
           </div>
@@ -145,7 +153,7 @@ export default class App extends Component {
           <div className="App_title">
             Order <span className="bold-text">Total</span>
           </div>
-          <div>{150 * small + 200 * medium + 300 * large}</div>
+          <div>{totalAmount}</div>
         </div>
       </div>
     );
