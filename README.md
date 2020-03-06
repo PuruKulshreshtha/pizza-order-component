@@ -2,7 +2,7 @@
 
 ## How to run the project online
 
-Open the online demo [here](https://manish-dalal.github.io/pizza-order-component)
+Open the online demo [here](https://PuruKulshreshtha.github.io/pizza-order-component)
 
 ## Description
 
@@ -10,7 +10,7 @@ This project was created for an interview as a ReactJS developer, it shows the u
 
 ### Run Localy
 
-1. Clone the repo `git clone https://github.com/manish-dalal/pizza-order-component.git`
+1. Clone the repo `git clone https://github.com/PuruKulshreshtha/pizza-order-component.git`
 2. `npm install` in command line to install dependencies in `package.json`
 3. `npm start` Project will launch in the browser
 
