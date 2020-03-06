@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pizza-order-component/static/css/main.d9ef0228.chunk.css",
-    "main.js": "/pizza-order-component/static/js/main.e137e41d.chunk.js",
-    "main.js.map": "/pizza-order-component/static/js/main.e137e41d.chunk.js.map",
+    "main.js": "/pizza-order-component/static/js/main.d74b6fc8.chunk.js",
+    "main.js.map": "/pizza-order-component/static/js/main.d74b6fc8.chunk.js.map",
     "runtime-main.js": "/pizza-order-component/static/js/runtime-main.aa37ab21.js",
     "runtime-main.js.map": "/pizza-order-component/static/js/runtime-main.aa37ab21.js.map",
     "static/js/2.f3aad86c.chunk.js": "/pizza-order-component/static/js/2.f3aad86c.chunk.js",
     "static/js/2.f3aad86c.chunk.js.map": "/pizza-order-component/static/js/2.f3aad86c.chunk.js.map",
     "index.html": "/pizza-order-component/index.html",
-    "precache-manifest.b012c2e7743757c5dd5968debf4c667c.js": "/pizza-order-component/precache-manifest.b012c2e7743757c5dd5968debf4c667c.js",
+    "precache-manifest.39ab9c4a7566660209bf4d4b3141b7ed.js": "/pizza-order-component/precache-manifest.39ab9c4a7566660209bf4d4b3141b7ed.js",
     "service-worker.js": "/pizza-order-component/service-worker.js",
     "static/css/main.d9ef0228.chunk.css.map": "/pizza-order-component/static/css/main.d9ef0228.chunk.css.map",
     "static/js/2.f3aad86c.chunk.js.LICENSE.txt": "/pizza-order-component/static/js/2.f3aad86c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.aa37ab21.js",
     "static/js/2.f3aad86c.chunk.js",
     "static/css/main.d9ef0228.chunk.css",
-    "static/js/main.e137e41d.chunk.js"
+    "static/js/main.d74b6fc8.chunk.js"
   ]
 }
